@@ -2,8 +2,7 @@
 ;;input output declaration
 (require '[clojure.java.io :as io])
 
-
-](defn write-twenty-lines [filename]
+(defn write-twenty-lines [filename]
   (with-open [wrt (io/writer filename)]
     (doseq [x (range 1 20)]
       (.write wrt (str x "\n")))))
