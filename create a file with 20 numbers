@@ -1,0 +1,8 @@
+;;function decalaration writes to a file
+(defn write-twenty-lines [filename]
+  (with-open [wrt (io/writer filename)]
+    (doseq [x (range 1 20)]
+      (.write wrt (str x "\n")))))
+
+;; call function write-twenty-lines (creates 20 random numbers between 0-19)
+(write-twenty-lines "twenty.txt")
